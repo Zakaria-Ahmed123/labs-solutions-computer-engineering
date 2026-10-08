@@ -46,3 +46,4 @@ begin
 			when others => y <= '0';
 		end case; 
 	end process; 
+end arch;
