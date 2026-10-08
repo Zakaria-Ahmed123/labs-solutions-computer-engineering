@@ -17,4 +17,32 @@ begin
 	begin 
 		if rst = '1' then ps <= A; 
 		else 
-			if rising_edge
+			if rising_edge(clk) then 
+				case ps is 
+					when A => if w = '0' then ps <= B;
+										else then ps <= A; 
+										end if; 
+
+					when B => if w = '0' then ps <= B;
+										else then ps <= C; 
+										end if; 
+
+					when C => if w = '0' then ps <= B;
+										else then ps <= C; 
+										end if; 
+
+					when D => if w = '0' then ps <= B;
+										else then ps <= A; 
+										end if; 
+				end case;
+			end if; 	
+		end if; 
+	end process; 
+
+	process(ps)
+	begin 
+		case ps is 
+			when D => y <= '1';
+			when others => y <= '0';
+		end case; 
+	end process; 
