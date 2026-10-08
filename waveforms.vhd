@@ -59,8 +59,4 @@ begin
 		end if; 
 	end process; 
 y <= temp; 
-end; 
-	
-
-	
-	
+end architecture; 
