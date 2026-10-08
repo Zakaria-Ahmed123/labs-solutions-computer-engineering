@@ -24,15 +24,13 @@ architecture arch of MealyFsm is
 								 else ps <= C;
 								 end if;
 					when C => if w = '0' then ps <= D;
+								 else ps <= C; 
 								 end if;
-					when D => ps <= A;		 
+					when D =>  if w = '0' then ps <= A;
+								 else ps <= A; 
+								 end if; 
 					end case;
 		  end if;	
 	  end process;
-	y <= '1' when (ps = c and w = '0') else '0';
+if y <= '1' when (ps = D and w = '1') else '0';
 end architecture;	  
-			
-			
-
-
-
