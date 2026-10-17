@@ -1,3 +1,41 @@
 *
 !*.*
 !*/
+
+# ==========================================
+# Quartus Project .gitignore
+# ==========================================
+
+# Ignore compilation databases and incremental compilation folders
+db/
+incremental_db/
+greybox_tmp/
+
+# Ignore compilation output directories (SOF, POF, RPT files)
+output_files/
+_output_files/
+
+# Ignore simulation, timing analysis, and testbench folders
+simulation/
+timing/
+testbench/
+
+# Ignore specific generated report and log files
+*.rpt
+*.summary
+*.smsg
+*.done
+*.jdi
+*.pin
+*.bak
+*.eqn
+*.qarlog
+
+# Ignore GUI state and user-specific layout configurations 
+*.qws
+
+# Ignore Platform Designer / Qsys auto-generated file trees
+# (Keep your original .qsys file, but ignore what it builds)
+*_generation_script*
+*_inst.vhd
+*_inst.v
