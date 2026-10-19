@@ -1,4 +1,4 @@
-\# The Solution Of The 2nd Lab
+# The Solution Of The 2nd Lab
 
 it's highly recomended to read from the handwritten solution.
 
